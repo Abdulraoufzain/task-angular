@@ -1,0 +1,16 @@
+<div>
+  <select class="form-select" (change)="onCategoryChange($event)">
+    @for(category of categories; track $index){
+    <option [value]="category.id">{{ category.name }}</option>
+    }
+  </select>
+</div>
+<div>
+  <select class="form-select" (change)="OnSubCategoryChange($event)">
+    @for(subCategory of subCategories; track $index){
+    <option [value]="subCategory.id">{{ subCategory.name
+      }}</option>
+    }
+  </select>
+</div>
+<app-book-list [books]="book"></app-book-list>

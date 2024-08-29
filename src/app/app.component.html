@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Library System</title>
+  <!-- إضافة Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper" [class.hidden]="isSidebarHidden">
+      <div class="sidebar-heading border-bottom bg-light">Library System</div>
+      <div class="list-group list-group-flush" id="sideNav">
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" [routerLink]="['Books']">Book</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3"
+          [routerLink]="['StackOverFlow']">StackOverFlow</a>
+      </div>
+    </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+      <!-- Top navigation-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid" id="mainContent">
+
+          <button class="btn btn-primary" id="toggleButton" (click)="toggleSidebar()">Toggle Menu</button>
+
+          <button class="navbar-toggler" type="button" (click)="toggleNavbar()" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          @if(!isNavbarCollapsed){
+          <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="navbarSupportedContent">
+            <!-- محتويات التنقل -->
+            <div class="list-group list-group-flush" id="sideNav">
+              <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                [routerLink]="['Books']">Book</a>
+              <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                [routerLink]="['StackOverFlow']">StackOverFlow</a>
+            </div>
+          </div>
+          }@else {
+
+          }
+        </div>
+      </nav>
+      <!-- Page content-->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- إضافة مكتبات Bootstrap و jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

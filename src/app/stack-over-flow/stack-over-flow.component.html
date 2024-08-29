@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Recent Questions</h1>
+  <div class="list-group">
+    @for(question of questions;; track question){
+    <a (click)="viewDetails(question.question_id)" class="list-group-item list-group-item-action">
+      <h5 class="mb-1">{{ question.title }}</h5>
+      <small>by {{ question.owner.display_name }} | {{ question.creation_date | date }}</small>
+    </a>
+    }
+  </div>
+</div>

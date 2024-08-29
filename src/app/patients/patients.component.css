@@ -1,0 +1,23 @@
+.table-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+.table-dark th,
+.table-dark td,
+.table-dark thead th {
+  border-color: #454d55;
+}
+.table-dark.table-hover tbody tr:hover {
+  color: #fff;
+  background-color: #23272b;
+}
+.table-hover tbody tr:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(to right, #f2f2f2, #e6e6e6);
+}
+.thead-dark th {
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.All {
+  background-color: rgb(0, 0, 134);
+  display: flex;
+  flex-direction: row;
+}
+
+/* إعدادات الصورة */
+.img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid black;
+  flex-shrink: 0;
+}
+
+.img-box img {
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.profile h2 {
+  font-size: 20px;
+}
+.profile .active{
+  text-align: left;
+}
+
+/* تنسيق العناصر الجانبية */
+.menu {
+  background-color: blue;
+  width: 0px;
+  height: 100vh;
+  padding: 55px;
+  overflow: hidden;
+  transition: .5s;
+  flex-shrink: 0;
+}
+
+.menu:hover {
+  width: 250px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  height: 95%;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: .5s;
+}
+.active{
+  padding: 0px;
+  text-align: left;
+}
+/* اللون الذي يظهر عند وضع الماوس على الزر */
+ul li a:hover , data-info, td:hover {
+  background-color: #f5060655;
+}
+
+/* تنسيق زر الخروج */
+.Log-out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* تلوين الزر */
+.Log-out a {
+  background-color: rgb(255, 0, 0);
+}
+
+/* icons in list */
+ul li a i {
+  color: rgb(30, 188, 202);
+  font-size: 30px;
+}
+
+/* طول وعرض عناصر لوحة التحكم */
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  align-items: start;
+  justify-content: start;
+  padding: 0px;
+  margin: 1px 0;
+}
+
+/* تنسيق العناوين */
+.title-info {
+  background-color: rgb(8, 96, 190);
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+
+/* تنسيق عناصر لوحة التحكم */
+.data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 75%;
+}
+
+/* تنسيق عناصر التحكم الداخلية */
+.data-info .box {
+  background-color: rgb(12, 14, 76);
+  height: 150px;
+  flex-basis: 150px;
+  flex-grow: 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.data-info .box i {
+  font-size: 40px;
+}
+
+.data-info .box .data {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+
+}
+
+.data-info .box .data span {
+  font-size: 30px;
+}
+
+/* تنسيق الجدول */
+table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 8px;
+}
+
+/* تنسيق شكل الجدول */
+td, th {
+  background-color: rgb(30, 189, 204);
+  height: 40px;
+}
+
+/* تنسيق رأس الجدول */
+th {
+  background-color: rgb(61, 61, 188);
+}
+
+/* تنسيق أعمدة الجدول */
+.price, .count {
+  padding: 6px;
+  border-radius: 0px;
+}
+
+.price {
+  background-color: green;
+}
+
+.count {
+  background-color: gold;
+  color: black;
+}
+
+.myname {
+  font-family: 'Times New Roman';
+}
+
+.menu .m .items {
+  text-align: center;
+}

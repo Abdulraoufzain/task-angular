@@ -1,0 +1,30 @@
+<h2 class="text-center my-4">Patients</h2>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Age</th>
+          <th scope="col">Disease</th>
+          <th scope="col">Doctor Id</th>
+          <th scope="col">Room Id</th>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{ patient.id }}</td>
+          <td>{{ patient.name }}</td>
+          <td>{{ patient.gender }}</td>
+          <td>{{ patient.age }}</td>
+          <td>{{ patient.disease }}</td>
+          <td>{{ patient.doctorId }}</td>
+          <td>{{ patient.roomId }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
